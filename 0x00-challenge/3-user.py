@@ -14,6 +14,7 @@ class User():
     """
 
     __password = None
+    _password = None
 
     def __init__(self):
         """
@@ -55,8 +56,9 @@ class User():
             return False
         if self.__password == pwd:
             return True
-        if hashlib.md5(pwd.encode()).hexdigest().upper() == self.__password:
+        if hashlib.md5(pwd.encode()).hexdigest().upper() == self._password:
             return True
+
 
 
 if __name__ == '__main__':
