@@ -57,8 +57,6 @@ class User():
             return True
         if hashlib.md5(pwd.encode()).hexdigest().upper() == self.__password:
             return True
-        else:
-            return False
 
 
 if __name__ == '__main__':
@@ -72,7 +70,7 @@ if __name__ == '__main__':
     if user_1.id == user_2.id:
         print("User.id should be unique_2")
 
-    u_pwd = "Fakepwd"
+    u_pwd = "my_password"
     user_1.password = u_pwd
     if user_1.password == u_pwd:
         print("User.password should be hashed_3")
